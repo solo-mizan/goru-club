@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hamba Village Union App
 
-## Getting Started
+A web application for managing a village union's deposits, members, and cow purchases. Built with Next.js, Express.js, MongoDB, and TailwindCSS.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Member Management:** Add, edit, and track village union members
+- **Deposit Tracking:** Record and monitor member deposits
+- **Cow Purchase Management:** Track cow purchases and participating members
+- **Public Dashboard:** View key statistics and information
+- **Admin Dashboard:** Manage all aspects of the village union
+- **PDF Reports:** Generate and download PDF reports of members and their deposits
+
+## Tech Stack
+
+- **Frontend:** Next.js 15 (App Router), TailwindCSS 4, React 19
+- **Backend:** Express.js, Node.js
+- **Database:** MongoDB with Mongoose
+- **PDF Generation:** @react-pdf/renderer
+- **File Upload:** express-fileupload
+
+## Prerequisites
+
+- Node.js 18+
+- MongoDB (local or Atlas connection)
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/hamba.git
+   cd hamba
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory with the following variables:
+   ```
+   MONGODB_URI=mongodb://localhost:27017/hamba
+   PORT=5000
+   NODE_ENV=development
+   ```
+
+## Running the Application
+
+To run both frontend and backend concurrently:
+
+```
+npm run dev:all
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or run them separately:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Frontend:
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Backend:
+```
+npm run dev:server
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+/
+├── src/
+│   ├── app/                   # Next.js App Router pages
+│   │   ├── admin/             # Admin dashboard
+│   │   └── page.tsx           # Landing page
+│   ├── components/            # React components
+│   │   ├── MembersList.tsx    # Public view of members
+│   │   ├── Stats.tsx          # Statistics display
+│   │   └── ...
+│   └── server/                # Express.js backend
+│       ├── models/            # Mongoose models
+│       │   ├── Member.js
+│       │   ├── Deposit.js
+│       │   └── CowPurchase.js
+│       ├── routes/            # API routes
+│       │   ├── members.js
+│       │   ├── deposits.js
+│       │   └── cowPurchases.js
+│       └── server.js          # Express server setup
+├── public/                    # Static files
+│   └── uploads/               # Upload directory for receipts
+└── ...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Endpoints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Members
+- `GET /api/members` - Get all members
+- `GET /api/members/:id` - Get a specific member
+- `POST /api/members` - Add a new member
+- `PUT /api/members/:id` - Update a member
+- `DELETE /api/members/:id` - Delete a member
 
-## Deploy on Vercel
+### Deposits
+- `GET /api/deposits` - Get all deposits
+- `GET /api/deposits/:id` - Get a specific deposit
+- `POST /api/deposits` - Add a new deposit
+- `PUT /api/deposits/:id` - Update a deposit
+- `DELETE /api/deposits/:id` - Delete a deposit
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Cow Purchases
+- `GET /api/cow-purchases` - Get all cow purchases
+- `GET /api/cow-purchases/:id` - Get a specific cow purchase
+- `POST /api/cow-purchases` - Add a new cow purchase
+- `PUT /api/cow-purchases/:id` - Update a cow purchase
+- `DELETE /api/cow-purchases/:id` - Delete a cow purchase
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+MIT
+
+## Author
+
+Your Name
+# goru-club
