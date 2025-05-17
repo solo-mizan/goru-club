@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Bengali font styling */
+.font-hind-siliguri {
+  font-family: var(--font-hind-siliguri), sans-serif;
+}
+
+/* Additional font size adjustments for Bengali text */
+html[lang="bn"] h1 {
+  font-size: 110%;
+  /* Slightly larger headings for Bengali */
+}
+
+html[lang="bn"] p,
+html[lang="bn"] span,
+html[lang="bn"] button,
+html[lang="bn"] a,
+html[lang="bn"] label,
+html[lang="bn"] option {
+  font-size: 105%;
+  /* Slightly larger text for better readability */
+}

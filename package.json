@@ -6,22 +6,45 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "start:alt": "next start -p 3001",
+    "lint": "next lint",
+    "server": "node src/server/server.js",
+    "dev:server": "nodemon src/server/server.js",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:server\"",
+    "prod:all": "concurrently \"npm run start:alt\" \"npm run server\"",
+    "setup:mongodb": "node scripts/setup-mongodb-atlas.js",
+    "test:mongodb": "node scripts/test-mongodb-connection.js",
+    "connect:mongodb": "node scripts/connect-mongodb.js"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.1",
+    "express-validator": "^7.2.1",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.14.3",
+    "mongoose-typescript": "^3.3.0",
+    "next": "15.3.2",
+    "next-intl": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.2"
+    "react-pdf": "^9.2.1",
+    "react-to-print": "^3.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/express": "^5.0.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "concurrently": "^9.1.2",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "@eslint/eslintrc": "^3"
+    "nodemon": "^3.1.10",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

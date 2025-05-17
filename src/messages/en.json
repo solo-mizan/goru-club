@@ -1,0 +1,57 @@
+{
+    "general": {
+        "appName": "Hamba Village Union",
+        "backToHome": "Back to Home",
+        "loading": "Loading...",
+        "error": "Error",
+        "cancel": "Cancel",
+        "save": "Save",
+        "edit": "Edit",
+        "delete": "Delete",
+        "actions": "Actions",
+        "confirmDelete": "Are you sure you want to delete this?",
+        "noDataFound": "No data found",
+        "currentLanguage": "English"
+    },
+    "adminLogin": {
+        "title": "Admin Dashboard",
+        "subtitle": "Please enter the admin password to continue",
+        "password": "Password",
+        "passwordPlaceholder": "Enter admin password",
+        "login": "Log in",
+        "incorrectPassword": "Incorrect password. Please try again."
+    },
+    "adminDashboard": {
+        "title": "Admin Dashboard",
+        "subtitle": "Manage members, deposits, and cow purchases",
+        "addDeposit": "Add Deposit",
+        "logout": "Logout",
+        "tabs": {
+            "members": "Members",
+            "deposits": "Deposits",
+            "cowPurchases": "Cow Purchases"
+        },
+        "footer": "© {year} Hamba Village Union. All rights reserved."
+    },
+    "deposits": {
+        "title": "Deposits",
+        "add": "Add Deposit",
+        "edit": "Edit Deposit",
+        "update": "Update Deposit",
+        "member": "Member",
+        "selectMember": "Select Member",
+        "amount": "Amount",
+        "date": "Date",
+        "status": "Status",
+        "notes": "Notes",
+        "statusOptions": {
+            "approved": "Approved",
+            "pending": "Pending",
+            "rejected": "Rejected"
+        },
+        "amountValidation": "Amount must be a positive number",
+        "saveError": "Failed to save deposit. Please try again.",
+        "deleteError": "Failed to delete deposit. Please try again.",
+        "noDeposits": "No deposits found. Add your first deposit!"
+    }
+}
